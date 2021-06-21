@@ -31,7 +31,7 @@ function oldScrabbleScorer(word) {
 
 // your job is to finish writing these functions and variables that we've named //
 // don't change the names or your program won't work as expected. //
-let word = ""
+let word = "";
 function initialPrompt() {
    console.log("Let's play some scrabble!\n");
    word = input.question("Enter a word to score: ");
@@ -53,7 +53,7 @@ function vowelBonusScore(word) {
     if (vowels.includes(word[i].toUpperCase())) {
       points += 3;
     } else {
-      points += 1
+      points += 1;
     }
  }
   return points;
@@ -62,7 +62,7 @@ function vowelBonusScore(word) {
 function scrabbleScore(word) {
   let points = 0;
   for (i = 0; i < word.length; i++) {
-    points += Number(newPointStructure[word[i].toLowerCase()])
+    points += Number(newPointStructure[word[i].toLowerCase()]);
   }
 return Number(points);
 
@@ -126,7 +126,7 @@ function transform(oldPointStructure){
        newObject[oldPointStructure[keys][i].toLowerCase()] = Number(keys);
      }
    }
-   return newObject
+   return newObject;
 }
 
 let newPointStructure = transform(oldPointStructure);
